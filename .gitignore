@@ -1,0 +1,12 @@
+Bertin_bmgf_credentials.csv
+Bertin_bmgf_accesskeys.csv
+.DS_Store
+/python
+/python.zip
+/wrangler
+/wrangler.zip
+aws_wrangler_layer.zip
+
+# AWS SAM build artifacts
+/lambda_local/.aws-sam/
+

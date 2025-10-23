@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Gates Dataset Lambda Local Test
+
+Resources:
+  GatesLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: GatesLambdaFunction
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.12
+      MemorySize: 1024
+      Timeout: 300
+      Environment:
+        Variables:
+          glue_catalog_db_name: "bmgf_glue_db"
+          glue_catalog_table_name: "bmgf_cleaned_processed_csv"
+          write_data_operation: "overwrite"
+      Events:
+        S3Upload:
+          Type: S3
+          Properties:
+            Bucket: bmgf-analysis
+            Events: s3:ObjectCreated:*

@@ -1,0 +1,14 @@
+{
+  "Records": [
+    {
+      "s3": {
+        "bucket": {
+          "name": "bmgf-analysis"
+        },
+        "object": {
+          "key": "bmgf_cleaned_processed.csv"
+        }
+      }
+    }
+  ]
+}
