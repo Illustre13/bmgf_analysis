@@ -22,3 +22,8 @@ Resources:
           Properties:
             Bucket: bmgf-analysis
             Events: s3:ObjectCreated:*
+        BMGF_Api:
+          Type: Api
+          Properties:
+            Path: /bmgf-data
+            Method: post
